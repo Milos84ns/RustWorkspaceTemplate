@@ -1,0 +1,16 @@
+[workspace]
+
+members = [ "app",
+            "lib",
+            "deploy",
+]
+
+resolver = "2"
+default-members = ["app","lib","deploy"]
+
+[profile.dist]
+inherits = "release"
+lto = "thin"
+
+[workspace.metadata.release]
+tag-prefix = ""
